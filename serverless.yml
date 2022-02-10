@@ -1,0 +1,25 @@
+testApp:
+  component: "@sls-next/serverless-component"
+  inputs:
+    domain: ["web", "vj-sample.net"]
+    domainMinimumProtocolVersion: "TLSv1.2_2018"
+    publicDirectoryCache:
+      value: public, max-age=604800
+      test: /\.(gif|jpe?g|png|txt|xml)$/i
+    memory:
+      defaultLambda: 1024
+      apiLambda: 2048
+      imageLambda: 2048
+    runtime:
+      defaultLambda: "nodejs14.x"
+      apiLambda: "nodejs14.x"
+      imageLambda: "nodejs14.x"
+    timeout:
+      defaultLambda: 20
+      apiLambda: 15
+      imageLambda: 15
+    cloudfront:
+      distributionId: E8EBD7C6JQFLW # this is the one displayed in the very first screen - I've created this. similarly we can choose the bucket where data needs to be deployed to
+      api/*:
+        forward:
+          headers: [Host]
