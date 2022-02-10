@@ -14,7 +14,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Prequisites
 
-¸Make sure to isntall serverless ```npm i -g serverless``` first
-¸Create your required distribution and use it in serverless.yml
--- Ţhere will be an issue that arises out of deploying the nextjs with the AWS ACM that gets auto created, make sure to create CNAME aliases in Route53 for the concerned ACM. That is the only way to address the issue
-¸Always run only ```serverless```. DO NOT USE deploy command
+- Make sure to isntall serverless ```npm i -g serverless``` first
+- Create your required distribution and use it in serverless.yml
+  `Note :Ţhere will be an issue that arises out of deploying the nextjs with the AWS ACM that gets auto created, make sure to create CNAME aliases in Route53 for the concerned ACM. That is the only way to address the issue`
+- Always run only ```serverless```. DO NOT USE deploy command
+- Refer this [Github](https://github.com/serverless-nextjs/serverless-next.js)
